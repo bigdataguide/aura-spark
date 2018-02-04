@@ -19,6 +19,7 @@ public class BasicPracticeOne {
         for(int i = 100; i <= 1000; i++) result.add(i);
         JavaRDD<Integer> input = jsc.parallelize(result, 7);
 
+
         // TODO add your code here
         List<Integer> head5 = input.take(5);
         System.out.println("head 5 elements are:" + head5);
