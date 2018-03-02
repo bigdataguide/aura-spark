@@ -5,6 +5,7 @@ import org.apache.spark.api.java.Optional;
 import org.apache.spark.api.java.StorageLevels;
 import org.apache.spark.api.java.function.Function0;
 import org.apache.spark.api.java.function.Function3;
+import org.apache.spark.streaming.Duration;
 import org.apache.spark.streaming.Durations;
 import org.apache.spark.streaming.State;
 import org.apache.spark.streaming.StateSpec;
@@ -45,6 +46,7 @@ public class StatefulStreamingWordCount {
 
         stateWordCounts.print();
         stateWordCounts.stateSnapshots().print();
+
         return ssc;
     }
 
